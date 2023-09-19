@@ -35,6 +35,7 @@ int main(void)
     signal(SIGINT, Handler);
 	
     printf("ADS1263 Demo \r\n");
+	printf("Test Break Point\r\n");
     DEV_Module_Init();
 
 	ADS1263_SetMode(0);
