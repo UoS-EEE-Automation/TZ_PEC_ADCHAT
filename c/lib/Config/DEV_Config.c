@@ -215,7 +215,7 @@ static int DEV_Equipment_Testing(void)
 	if(i<5) {
 		printf("Unrecognizable\r\n");
 	} else {
-		char RPI_System[10]   = {"Raspbian"};
+		char RPI_System[10]   = {"Debian"};
 		for(i=0; i<6; i++) {
 			if(RPI_System[i]!= value_str[i]) {
 				printf("Please make JETSON !!!!!!!!!!\r\n");
@@ -268,9 +268,9 @@ Info:
 UBYTE DEV_Module_Init(void)
 {
     printf("/***********************************/ \r\n");
-	if(DEV_Equipment_Testing() < 0) {
-		return 1;
-	}
+//	if(DEV_Equipment_Testing() < 0) {
+//		return 1;
+//	}
 #ifdef RPI
 #ifdef USE_BCM2835_LIB
 	if(!bcm2835_init()) {
